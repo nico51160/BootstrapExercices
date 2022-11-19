@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="design/dafaut.css">
+    <title>site bootstrap5</title>
+</head>
+
+<!-- Making a BurgerMenu-->
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <div class="container">
+            <div class="navbar-brand">
+                Smoosh
+            </div>
+            <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#monMenuDeroulant">
+                <span class="navbar-toggler-icon"></span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="monMenuDeroulant">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Acceuil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+                
+        </div>
+        
+    </nav>
+
+
+    <!-- Making a Carousel-->
+
+
+    <div id="monPetitCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    
+
+    <!--indicators -->
+    <ul class="carousel-indicators" >
+        <li data-bs-target="#monPetitCarousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#monPetitCarousel" data-bs-slide-to="1"></li>
+
+    </ul>
+
+
+    <!-- Carousel container-->
+    <div class="carousel-inner">
+
+        <!--first Slide-->
+        <div class="carousel-item active">
+            <img src="https://cdn.pixabay.com/photo/2019/12/01/21/29/walk-4666509_1280.jpg"
+            class="w-100 d-block" alt="">
+
+        </div>
+
+        <!--second Slide-->
+
+        <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079_1280.jpg" 
+            class="w-100 d-block" alt="">
+            
+
+            <!--Description-->
+            <div class="carousel-caption">
+                 <h5>L'autonme' arrive !</h5>
+                 <p>Le climat est plus sombre </p>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Controls-->
+
+    <a class="carousel-control-prev" href="#monPetitCarousel" data-bs-slide="prev">
+
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Précédent</span>
+
+    </a>
+
+    <a class="carousel-control-next" href="#monPetitCarousel" data-bs-slide="prev">
+
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Précédent</span>
+    
+        </a>
+
+    </div>
+
+    <!-- Dropdown (liste déroulante)-->
+    <div class="dropdown m-3 dropdown">
+
+        <!--Bouton-->
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Je suis le menu
+        </button>
+
+        <!-- Les éléments du menu-->
+
+        <ul class="dropdown-menu" aria-labbeledby="monBouton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+
+        </ul>
+
+
+
+
+        <!--Modale-->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#supprimer">
+            supprimer le compte 
+        </button>
+
+        <!-- Créer une modale -->
+
+        <div class="modal fade" id="supprimer" data-bs-backdrop="static">
+
+        <!--Créer la boite de dialogue-->
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!--Créer le contenu-->
+            <div class="modal-content">
+
+                 <!--HEADER-->
+                 <div class="modal-header">
+                    <h5 class="modal-title">Supprimer mon compte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                        <span class="visually-hidden"></span>
+
+
+                    </button>
+                 </div>
+
+                 <!--Body-->
+
+                 <div class="modal-body">
+                    <p class="m-0">Etes vous sur de vous ? C'est tres dangereux</p>
+
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-danger" data-bs-toogle="tooltip" data-bs-placement="top" title="cette fonctionalité n'est pas encore disponible" data-bs-dismiss="modal">Fermer</button>
+                                                                  <!--ajout pour texte : data-bs-toogle="tooltip" data-bs-placement="top" title="cette fonctionalité n'est pas encore disponible"-->                    
+                </div>
+
+                 </div>
+
+
+
+
+            </div>
+               
+
+
+            
+
+        </div>
+
+
+    </div>
+
+
+
+
+    </div>
+
+    <div class="btn-group m-3">
+        <button type="button" class="btn btn-primary">J'aime</button>
+
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" id="mesOptions">
+            <span class="visually-hidden">Option</span>
+        </button>
+        <ul class="dropdown-menu"  aria-labelledby="mesOptions">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+    </ul>
+
+    </div>
+
+
+
+
+
+    <!--Bubbleinfo-->
+
+    <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ma premiere infobulle">
+        Action
+    </button>
+
+    <!--Popover-->
+    <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="fonctionnalité non crée">
+        fonctionalité
+    </button>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        
+
+        <!--script bubbleInfo (il faut mettre le cursor dessus pour faire apparaitre la fenetre)-->
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl){
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            }) 
+        </script>
+
+                <!--script Popover (il faut clicker pour faire apparaitre apparaitre la fenetre)-->
+                <script>
+                    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+                    var popoverList = popoverTriggerList.map(function(popoverTriggerEl){
+                        return new bootstrap.Popover(popoverTriggerEl)
+                    }) 
+                </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
